@@ -27,7 +27,7 @@ private:
     /*
     * This function is an attempt to prevent redundant code duplication.
     * Receives base counter and base itself and returns appropriate Roman string.
-    * Assumes 1<=n<=9 and 'base' is a multiple of 10, s.t. 10<=base<=1000
+    * Assumes 0<=n<=9 and 'base' is a multiple of 10, s.t. 10<=base<=1000
     */
     string baseCountToRoman(int n, int base) {
         const char base_char = this->romanIntValue(base);
