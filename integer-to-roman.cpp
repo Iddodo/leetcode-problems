@@ -17,7 +17,6 @@ public:
         */
         for (int base = 1000; base > 0; base /= 10) {
             result += this->baseCountToRoman(rem / base, base);
-            cout << endl;
             rem -= base*(rem / base);
         }
         
