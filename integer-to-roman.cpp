@@ -1,3 +1,6 @@
+#include <string>
+using std::string;
+
 class Solution {
 public:
     /*
@@ -28,7 +31,7 @@ private:
     * Receives base counter and base itself and returns appropriate Roman string.
     * Assumes 0<=n<=9 and 'base' is a multiple of 10, s.t. 10<=base<=1000
     */
-    string baseCountToRoman(int n, int base) {
+    string baseCountToRoman(int n, int base) const {
         const char base_char = this->romanIntValue(base);
         const char middle_char = this->romanIntValue(5*base);
         const char next_base_char = this->romanIntValue(10*base);
@@ -52,7 +55,7 @@ private:
         return "";
     }
     
-    const char romanIntValue(int n) {
+    char romanIntValue(int n) const {
         switch (n) {
             case 1: return 'I';
             case 5: return 'V';

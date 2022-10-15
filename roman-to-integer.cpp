@@ -1,3 +1,6 @@
+#include <string>
+using std::string;
+
 #define NUM_SUBSTRACTIONS 6
 
 class Solution {
@@ -40,7 +43,7 @@ private:
     * Returns the value that should be added to integer value of roman number.
     * In case of no valid substraction, return roman value of left character
     */
-    const int evaluatePair(char x, char y, bool* is_substraction) {
+    int evaluatePair(char x, char y, bool* is_substraction) const {
         const string pair = {x, y};
         
         // Set 'is_substraction' to true in case of an instance.
@@ -60,7 +63,7 @@ private:
         return this->romanCharValue(x);
     }
     
-    const int romanCharValue(char x) {
+    int romanCharValue(char x) const {
         switch (x) {
             case 'I': return 1;
             case 'V': return 5;
